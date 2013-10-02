@@ -1,0 +1,51 @@
+SITE
+  remote: http://community.opscode.com/api/v1
+  specs:
+    apt (2.1.1)
+    build-essential (1.4.2)
+    chef_handler (1.1.4)
+    dmg (2.0.0)
+    git (2.6.0)
+      build-essential (>= 0.0.0)
+      dmg (>= 0.0.0)
+      runit (>= 1.0.0)
+      windows (>= 0.0.0)
+      yum (>= 0.0.0)
+    imagemagick (0.2.2)
+    runit (1.2.0)
+      build-essential (>= 0.0.0)
+      yum (>= 0.0.0)
+    windows (1.10.0)
+      chef_handler (>= 0.0.0)
+    yum (2.3.2)
+
+GIT
+  remote: https://github.com/fnichol/chef-rbenv
+  ref: master
+  sha: 9afb4e5da2e6212504a12de3bbbd410cd96100f6
+  specs:
+    rbenv (0.7.3)
+
+GIT
+  remote: https://github.com/fnichol/chef-ruby_build
+  ref: v0.7.2
+  sha: c940b5e9cd40eaba10d6285de6648f4d25fe959d
+  specs:
+    ruby_build (0.7.2)
+
+GIT
+  remote: https://github.com/phlipper/chef-postgresql
+  ref: master
+  sha: 8b128aaf4a9729e794d5b417cc130adb1cd6f3c1
+  specs:
+    postgresql (0.12.0)
+      apt (>= 0.0.0)
+
+DEPENDENCIES
+  apt (>= 0)
+  git (>= 0)
+  imagemagick (>= 0)
+  postgresql (>= 0)
+  rbenv (>= 0)
+  ruby_build (>= 0)
+
