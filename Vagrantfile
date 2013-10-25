@@ -9,20 +9,31 @@ Vagrant.configure("2") do |config|
 
   config.vm.synced_folder "~/Projects", "/code"
 
-  [3000, 4000].each do |port|
-    config.vm.network :forwarded_port, guest: port, host: port
+  [3000, 4000, 4567, 9292].each do |port|
+    config.vm.network :forwarded_port, guest: port, host: port, nfs: true
+  end
+
+  config.vm.provider "virtualbox" do |v|
+    v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+    v.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
   end
 
   config.vm.provision :chef_solo do |chef|
-    chef.cookbooks_path = ["cookbooks"]    
+    chef.cookbooks_path = ["cookbooks"]
     chef.add_recipe "apt"
     chef.add_recipe 'git'
     chef.add_recipe 'postgresql::server'
     chef.add_recipe 'postgresql::contrib'
     chef.add_recipe 'postgresql::server_dev'
 
+    chef.add_recipe 'nodejs'
+    chef.add_recipe 'nodejs::npm'
+
     chef.add_recipe 'ruby_build'
     chef.add_recipe 'rbenv::user'
+    chef.add_recipe 'redis::install_from_package'
+    chef.add_recipe 'oh_my_zsh'
+    chef.add_recipe 'locale'
     chef.json = {
       'postgresql' => {
         "version" => "9.2",
@@ -46,6 +57,13 @@ Vagrant.configure("2") do |config|
             }
           }
         ]
+      },
+      'oh_my_zsh' => {
+        'users' => [{
+          :login => 'vagrant',
+#          :theme => 'agnoster',
+          :plugins => ['gem', 'git', 'redis-cli', 'ruby', 'heroku', 'rake', 'rbenv', 'capistrano']
+        }]
       }
     }
   end
