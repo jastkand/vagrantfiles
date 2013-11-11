@@ -13,6 +13,9 @@ Vagrant.configure("2") do |config|
     config.vm.network :forwarded_port, guest: port, host: port, nfs: true
   end
 
+  timezone = 'Europe/Moscow'
+  config.vm.provision :shell, :inline => "echo \"#{timezone}\" | sudo tee /etc/timezone && dpkg-reconfigure --frontend noninteractive tzdata"
+
   config.vm.provider "virtualbox" do |v|
     v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
     v.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
