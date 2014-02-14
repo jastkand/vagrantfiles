@@ -1,0 +1,11 @@
+---
+# Initializes custom user
+- name: Ensure DB user has access to the DB
+  postgresql_user: name={{ postgresql.custom.user }}
+                   password={{ postgresql.custom.password }}
+                   role_attr_flags={{ postgresql.custom.role_attrs }} state=present
+  sudo_user: postgres
+  sudo: True
+  tags:
+    - postgresql
+    - user:setup

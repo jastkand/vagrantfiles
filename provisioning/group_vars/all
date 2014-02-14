@@ -1,0 +1,70 @@
+# Which user do we want to install ruby for
+host:
+  user: vagrant
+
+# Which versions we want to install (see `rbenv install -l`)
+ruby_versions:
+  - 2.0.0-p353
+  - 2.1.0
+
+# The default version (used with `rbenv global`)
+ruby_default: "2.0.0-p353"
+
+# Dependencies required to build ruby
+# YMMV if you want something else than MRI
+ruby_deps:
+  - autoconf
+  - automake
+  - bison
+  - build-essential
+  - curl
+  - exuberant-ctags
+  - git-core
+  - libreadline6
+  - libreadline6-dev
+  - libreadline-dev
+  - libsqlite3-0
+  - libsqlite3-dev
+  - libssl-dev
+  - libyaml-dev
+  - libc6-dev
+  - libncurses5-dev
+  - libtool
+  - libxml2-dev
+  - libxslt1-dev
+  - openssl
+  - sqlite3
+  - subversion
+  - zlib1g
+  - zlib1g-dev
+
+postgresql:
+  version: 9.3
+  repo: 'deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main'
+  install_development_headers: true
+
+  user: postgres
+  group: postgres
+
+  custom:
+    user: vagrant
+    password: password
+    role_attrs: superuser,createdb,login
+
+  config:
+    shared_buffers: 64MB
+    work_mem: 1MB
+
+    checkpoint_segments: 3
+    checkpoint_completion_target: 0.5
+
+    effective_cache_size: 128MB
+
+redis:
+  deb:
+    package: 'redis-server'
+    service: 'redis-server'
+
+zsh:
+  theme: 'agnoster'
+

@@ -1,0 +1,3 @@
+---
+# Install Redis
+- include: redis.yml tags=redis

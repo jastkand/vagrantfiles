@@ -1,18 +1,11 @@
 # Vagrant files
 
-My vagrant files to setup development environment.
-
-## Preparation
-
-~~~ sh
-$ gem install vagrant
-$ gem install chef
-$ gem install librarian
-~~~
+This is a Vagrantfile that allows to setup development environment using Ansible as provisioner.
 
 ## Installation
 
-~~~ sh
-$ librarian-chef install
-$ vagrant up
-~~~
+    $ gem install vagrant
+
+[Install Ansible](http://docs.ansible.com/intro_installation.html)
+
+    $ vagrant up

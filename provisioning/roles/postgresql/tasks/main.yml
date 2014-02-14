@@ -1,0 +1,6 @@
+---
+
+- include: repository.yml
+- include: postgresql.yml
+- include: user-setup.yml
+  when: postgresql.custom is defined

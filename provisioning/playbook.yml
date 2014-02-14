@@ -1,0 +1,9 @@
+- hosts: vagrant
+  sudo: true
+  roles:
+    - common
+    - postgresql
+    - role: ruby-multi
+      versions: $ruby_versions
+    - redis
+    - oh_my_zsh
