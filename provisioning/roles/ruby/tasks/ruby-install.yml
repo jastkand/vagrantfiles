@@ -17,3 +17,10 @@
     - ruby
     - ruby:install
     - install
+
+- name: rbenv rehash
+  shell: cd; bash -lc "rbenv rehash"
+  tags:
+    - ruby
+    - ruby:install
+    - install

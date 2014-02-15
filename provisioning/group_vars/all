@@ -7,6 +7,10 @@ ruby_versions:
   - 2.0.0-p353
   - 2.1.0
 
+ruby_gems:
+  - bundle
+  - pg
+
 # The default version (used with `rbenv global`)
 ruby_default: "2.0.0-p353"
 
