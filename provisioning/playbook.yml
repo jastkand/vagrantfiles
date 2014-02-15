@@ -3,6 +3,7 @@
   roles:
     - common
     - postgresql
+    - imagemagick
     - rbenv
     - role: ruby-multi
       versions: $ruby_versions
