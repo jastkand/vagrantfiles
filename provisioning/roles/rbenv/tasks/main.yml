@@ -1,0 +1,12 @@
+# Common prereqs (e.g. build tools, libs)
+- include: common-prereqs.yml
+
+# rbenv setup
+- include: rbenv-setup.yml
+  sudo: yes
+  sudo_user: "{{ host.user }}"
+
+# Common ruby environment tasks (e.g. adding a .gemrc, ...)
+- include: common-post.yml
+  sudo: yes
+  sudo_user: "{{ host.user }}"

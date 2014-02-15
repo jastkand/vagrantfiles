@@ -3,6 +3,7 @@
   roles:
     - common
     - postgresql
+    - rbenv
     - role: ruby-multi
       versions: $ruby_versions
     - redis
