@@ -6,6 +6,7 @@ host:
 ruby_versions:
   - 2.0.0-p353
   - 2.1.0
+  - 2.1.1
 
 rbenv_makeopts: ""
 
@@ -14,7 +15,7 @@ ruby_gems:
   - pg
 
 # The default version (used with `rbenv global`)
-ruby_default: "2.0.0-p353"
+ruby_default: "2.1.1"
 
 # Dependencies required to build ruby
 # YMMV if you want something else than MRI
