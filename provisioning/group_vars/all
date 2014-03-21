@@ -2,6 +2,10 @@
 host:
   user: vagrant
 
+git:
+  name: Your name
+  email: Your email
+
 # Which versions we want to install (see `rbenv install -l`)
 ruby_versions:
   - 2.0.0-p451

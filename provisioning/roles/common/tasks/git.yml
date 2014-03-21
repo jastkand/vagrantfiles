@@ -1,3 +1,0 @@
-- name: Git | Install git
-  action: apt pkg=git-core state=installed
-  tags: git

@@ -1,3 +1,2 @@
 # - include: vim.yml
-- include: git.yml
 - include: nodejs.yml
