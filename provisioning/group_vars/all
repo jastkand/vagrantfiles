@@ -8,9 +8,7 @@ git:
 
 # Which versions we want to install (see `rbenv install -l`)
 ruby_versions:
-  - 2.0.0-p451
-  - 2.1.0
-  - 2.1.1
+  - 2.1.2
 
 rbenv_makeopts: ""
 
@@ -19,7 +17,7 @@ ruby_gems:
   - pg
 
 # The default version (used with `rbenv global`)
-ruby_default: "2.1.1"
+ruby_default: '2.1.2'
 
 # Dependencies required to build ruby
 # YMMV if you want something else than MRI
