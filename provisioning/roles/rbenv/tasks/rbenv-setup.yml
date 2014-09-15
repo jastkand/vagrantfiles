@@ -1,5 +1,5 @@
 - name: Installs rbenv
-  git: repo=git://github.com/sstephenson/rbenv.git dest=~{{ host.user }}/.rbenv
+  git: repo=git://github.com/sstephenson/rbenv.git dest=~{{ host.user }}/.rbenv accept_hostkey=yes
   tags:
     - ruby
     - ruby:install
@@ -30,7 +30,7 @@
     - install
 
 - name: Installs ruby-build
-  git: repo=git://github.com/sstephenson/ruby-build.git dest=~{{ host.user }}/.rbenv/plugins/ruby-build
+  git: repo=git://github.com/sstephenson/ruby-build.git dest=~{{ host.user }}/.rbenv/plugins/ruby-build accept_hostkey=yes
   tags:
     - ruby
     - ruby:install
