@@ -1,3 +1,4 @@
+# TODO: 2-4 tasks are not working
 - name: Add .gitignore_global
   copy: src=gitignore_global dest=~{{ host.user }}/.gitignore_global owner={{ host.user }} group={{ host.user }} mode=0750
   tags:
