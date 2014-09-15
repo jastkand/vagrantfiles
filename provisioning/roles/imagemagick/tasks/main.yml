@@ -1,3 +1,6 @@
+##
+# imagemagick installation
+#
 - name: Installs imagemagick
   apt: name={{ item }} state=installed update-cache=yes
   with_items:
