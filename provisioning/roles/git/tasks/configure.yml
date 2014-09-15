@@ -1,21 +1,21 @@
 - name: Add .gitignore_global
-  copy: src=gitignore_global dest=~/.gitignore_global mode=0644
+  copy: src=gitignore_global dest=~{{ host.user }}/.gitignore_global owner={{ host.user }} group={{ host.user }} mode=0750
   tags:
     - git
 
 - name: Config git to use global gitignore file
-  shell: cd; bash -lc "git config --global core.excludesfile '~/.gitignore_global'"
+  command: "git config --global core.excludesfile '~/.gitignore_global'"
   tags:
     - git
 
 - name: Configure user's name
-  shell: cd; bash -lc "git config --global user.name '{{ git.name }}'"
+  command: git config --global user.name '{{ git.name }}'
   when: git.name is defined
   tags:
     - git
 
 - name: Configure user's email
-  shell: cd; bash -lc "git config --global user.email '{{ git.email }}'"
+  command: git config --global user.email '{{ git.email }}'
   when: git.email is defined
   tags:
     - git
