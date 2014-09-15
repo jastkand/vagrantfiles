@@ -4,6 +4,7 @@
   register: postgresql_install
   with_items:
     - postgresql
+    - postgresql-contrib
   tags:
     - packages
 
