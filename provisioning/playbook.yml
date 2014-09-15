@@ -2,6 +2,7 @@
   sudo: true
   roles:
     - common
+    - git
     - postgresql
     - imagemagick
     - rbenv
