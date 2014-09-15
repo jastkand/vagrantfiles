@@ -17,16 +17,16 @@
   action: shell cd /home/{{ host.user }}/.oh-my-zsh/themes; bash -lc "patch -p2 < unbreak_powerline.patch"
 
 - name: Oh-my-zsh | Make sure that the conf directory exists
-  file: path=/home/{{ host.user }}/conf state=directory owner={{ host.user }}
+  file: path=/home/{{ host.user }}/.conf state=directory owner={{ host.user }}
 
 - name: Oh-my-zsh | Deploy .zshrc config
-  template: src=zshrc.in dest=/home/{{ host.user }}/conf/zshrc owner={{ host.user }}
+  template: src=zshrc.in dest=/home/{{ host.user }}/.conf/zshrc owner={{ host.user }}
 
 - name: Oh-my-zsh | Remove default .zshrc
   file: path=/home/{{ host.user }}/.zshrc state=absent
 
 - name: Oh-my-zsh | Symlink zshrc
-  file: path=/home/{{ host.user }}/.zshrc src=/home/{{ host.user }}/conf/zshrc state=link owner={{ host.user }}
+  file: path=/home/{{ host.user }}/.zshrc src=/home/{{ host.user }}/.conf/zshrc state=link owner={{ host.user }}
 
 - name: Oh-my-zsh | Set zsh as default shell
   user: name={{ host.user }} shell=/bin/zsh
