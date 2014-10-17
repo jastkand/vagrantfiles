@@ -1,4 +1,4 @@
-# Vagrant files
+# Vagrantfile
 
 This is a Vagrantfile that allows to setup development environment using Ansible as provisioner.
 
@@ -9,6 +9,11 @@ This is a Vagrantfile that allows to setup development environment using Ansible
 [Install Ansible](http://docs.ansible.com/intro_installation.html)
 
     $ vagrant up
+
+## Provisioning
+
+Before `vagrant up` make sure you have correct sudo-user password in `provisioning/ansible_host` file.
+Also you can enter your name and email for git in `provisionsing/group_vars/all` file.
 
 ## Thanks
 
