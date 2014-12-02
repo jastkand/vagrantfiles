@@ -8,7 +8,7 @@
    - git-core
 
 - name: Oh-my-zsh | Clone oh-my-zsh repo
-  git: repo=https://github.com/robbyrussell/oh-my-zsh.git dest=/home/{{ host.user }}/.oh-my-zsh
+  git: repo=git://github.com/robbyrussell/oh-my-zsh.git dest=~{{ host.user }}/.oh-my-zsh accept_hostkey=yes
 
 - name: Oh-my-zsh | Add unbreak patch file for agnoster theme
   template: src=unbreak_powerline.patch dest=/home/{{ host.user }}/.oh-my-zsh/themes
