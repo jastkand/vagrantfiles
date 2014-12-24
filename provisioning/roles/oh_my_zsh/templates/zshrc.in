@@ -43,5 +43,7 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 
+export EDITOR="vi"
+
 source $HOME/.profile
 source $HOME/.bash_profile
