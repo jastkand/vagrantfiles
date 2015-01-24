@@ -46,6 +46,9 @@ ruby_deps:
   - subversion
   - zlib1g
   - zlib1g-dev
+  - libffi-dev
+  - libgdbm3
+  - libgdbm-dev
 
 postgresql:
   version: 9.3
