@@ -5,7 +5,7 @@ Vagrant.configure(2) do |config|
   box_path = File.expand_path File.join('../Documents/vmware_fusion.box')
   config.vm.box_url = "file://#{box_path}"
 
-  [3000, 3500, 4000, 4567, 8888, 9292].each do |port|
+  [3000, 3500, 4000, 4567, 8888, 9292, 35729].each do |port|
     config.vm.network :forwarded_port, guest: port, host: port
   end
 
