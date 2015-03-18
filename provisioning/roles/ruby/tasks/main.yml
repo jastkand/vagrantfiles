@@ -1,10 +1,10 @@
 # Installing required ruby versions
 - include: ruby-install.yml ruby_version={{ version }}
   sudo: yes
-  sudo_user: "{{ host.user }}"
+  sudo_user: "{{ ruby_deploy_user }}"
 
 # Installing required ruby gems
 - include: gem-install.yml
   sudo: yes
-  sudo_user: "{{ host.user }}"
+  sudo_user: "{{ ruby_deploy_user }}"
   when: ruby_gems is defined

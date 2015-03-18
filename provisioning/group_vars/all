@@ -1,4 +1,6 @@
 # Which user do we want to install ruby for
+ruby_deploy_user: vagrant
+
 host:
   user: vagrant
 
