@@ -1,12 +1,12 @@
-# Which user do we want to install ruby for
-ruby_deploy_user: vagrant
+git:
+  name: Your name
+  email: Your email
 
 host:
   user: vagrant
 
-git:
-  name: Your name
-  email: Your email
+# Which user do we want to install ruby for
+ruby_deploy_user: vagrant
 
 # Which versions we want to install (see `rbenv install -l`)
 ruby_versions:
