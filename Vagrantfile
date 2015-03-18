@@ -11,9 +11,6 @@ Vagrant.configure(2) do |config|
 
   config.vm.synced_folder '~/Projects', '/home/vagrant/code'
 
-#  timezone = 'Europe/Moscow'
-#  config.vm.provision :shell, inline: "echo \"#{timezone}\" | sudo tee /etc/timezone && dpkg-reconfigure --frontend noninteractive tzdata"
-
   config.vm.provision :ansible do |ansible|
     ansible.playbook = 'provisioning/playbook.yml'
     ansible.inventory_path = 'provisioning/ansible_host'
@@ -22,10 +19,10 @@ Vagrant.configure(2) do |config|
     ansible.verbose = 'vvvv'
   end
 
-#  config.vm.provider :virtualbox do |v|
-#    v.memory = 2048
-#    v.cpus = 2
-#  end
+  config.vm.provider :virtualbox do |v|
+    v.memory = 2048
+    v.cpus = 2
+  end
 
   config.vm.provider 'vmware_fusion' do |v|
     v.gui = false
