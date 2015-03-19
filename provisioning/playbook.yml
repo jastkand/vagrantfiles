@@ -5,8 +5,7 @@
     - git
     - postgresql
     - imagemagick
-    - rbenv
-    - role: ruby-multi
-      versions: $ruby_versions
+    - erasme.rbenv
+    - erasme.ruby-compiled
     - redis
     - oh_my_zsh

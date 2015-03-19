@@ -1,7 +1,0 @@
-- name: Installs gems
-  shell: cd; bash -lc "gem install {{ item }}"
-  with_items: ruby_gems
-  tags:
-    - ruby
-    - ruby:install
-    - install

@@ -1,2 +1,0 @@
-- name: Sets global ruby version
-  shell: cd; bash -lc "rbenv global {{ ruby_default }}"

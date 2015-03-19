@@ -8,15 +8,8 @@ host:
 # Which user do we want to install ruby for
 ruby_deploy_user: vagrant
 
-# Which versions we want to install (see `rbenv install -l`)
-ruby_versions:
-  - 2.2.1
-
-rbenv_makeopts: ""
-
-ruby_gems:
-  - bundle
-  - pg
+# Which version we want to install (see `rbenv install -l`)
+ruby_version: 2.2.1
 
 # The default version (used with `rbenv global`)
 ruby_default: '2.2.1'
