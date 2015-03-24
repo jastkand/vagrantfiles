@@ -4,6 +4,8 @@
     - common
     - git
     - postgresql
+    - ANXS.postgresql
+    - postgresql-ext
     - imagemagick
     - erasme.rbenv
     - erasme.ruby-compiled
