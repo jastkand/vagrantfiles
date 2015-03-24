@@ -3,11 +3,10 @@
   roles:
     - common
     - git
-    - postgresql
     - ANXS.postgresql
     - postgresql-ext
     - imagemagick
     - erasme.rbenv
     - erasme.ruby-compiled
-    - redis
+    - DavidWittman.redis
     - oh_my_zsh

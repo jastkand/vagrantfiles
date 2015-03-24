@@ -7,7 +7,9 @@ Vagrant.configure(2) do |config|
   # config.vm.box_url = "file://#{box_path}"
 
   config.vm.provider :vmware_fusion do |v, override|
-    override.vm.box_url = 'https://oss-binaries.phusionpassenger.com/vagrant/boxes/latest/ubuntu-14.04-amd64-vmwarefusion.box'
+    box_path = File.expand_path File.join('../../Documents/vmware_fusion.box')
+    override.vm.box_url = "file://#{box_path}"
+    # override.vm.box_url = 'https://oss-binaries.phusionpassenger.com/vagrant/boxes/latest/ubuntu-14.04-amd64-vmwarefusion.box'
 
     v.gui = false
   end
